@@ -1,9 +1,3 @@
-// Initialize API key, session, and token...
-// Think of a session as a room, and a token as the key to get in to the room
-// Sessions and tokens are generated on your server and passed down to the client
-var apiKey = "1127";
-var sessionId = "1_MX4xMTI3fn5UdWUgSnVuIDE4IDE0OjQyOjA5IFBEVCAyMDEzfjAuMjk3MDcwOTh-";
-var token = "T1==cGFydG5lcl9pZD0xMTI3JnNpZz1lZTU4MzQ4MDI0YWQxMThhZDg0MzVkNDM2NTQ2NWQ3YmY4ZmYxZjE5OnNlc3Npb25faWQ9MV9NWDR4TVRJM2ZuNVVkV1VnU25WdUlERTRJREUwT2pReU9qQTVJRkJFVkNBeU1ERXpmakF1TWprM01EY3dPVGgtJmNyZWF0ZV90aW1lPTEzNzE1OTE3Mjkmbm9uY2U9MTczOTA0JnJvbGU9cHVibGlzaGVy";  
 var session = TB.initSession(sessionId);  
 
   var initSession = function(apiKey, sessionId, token) {
