@@ -15,9 +15,12 @@ var session = TB.initSession(sessionId);
   }
 
   function sessionConnectedHandler(event) {
-    var publisher = TB.initPublisher(apiKey, 'myPublisherDiv');
-    session.publish(publisher);
-
+    Deps.autorun(function(){
+      if(Session.equals('canPublish', true)) {
+        var publisher = TB.initPublisher(apiKey, 'myPublisherDiv');
+        session.publish(publisher);
+      }
+    });
     // Subscribe to streams that were in the session when we connected
     subscribeToStreams(event.streams);
   }
@@ -45,5 +48,6 @@ var session = TB.initSession(sessionId);
   }
 
   Meteor.startup(function(){
+    Session.set('canPublish', false);
     initSession(apiKey, sessionId, token);   
   });
